@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quiz Online Application</title>
+		<link rel="shortcut icon" href="" type="image/x-icon" />
+		<!-- Call Awesome Icons -->
+		<link rel="stylesheet" href="style/all.min.css" />
+		<!-- Call CSS Bootstrap File -->
+		<link rel="stylesheet" href="style/bootstrap.min.css" />
+		<!-- Call Main CSS File -->
+		<link rel="stylesheet" href="style/main.css" />
+	</head>
+	<body>
+		<!-- Start Main Section -->
+		<main>
+			<div class="start-screen" id="start-screen">
+				<h1 class="title" id="title">Quiz Online Application</h1>
+				<div class="timer hidden" id="start-timer">
+					Counter:
+					<span class="counter" id="start-counter"></span>
+				</div>
+				<button type="button" class="button start-quiz" id="start-quiz-button">Start Quiz</button>
+			</div>
+			<div class="quiz-screen" id="quiz-screen">
+				<header class="header-card" id="header-card">
+					<h1 class="title" id="title">Quiz Online Application</h1>
+					<time class="timer" id="timer">
+						Time
+						<span class="counter" id="counter"></span>
+					</time>
+					<div class="number-of-page" id="number-of-page"></div>
+				</header>
+				<div class="content-card" id="content-card">
+					<div class="meta-information" id="meta-information">
+						<div class="type" id="type"></div>
+						<div class="category" id="category"></div>
+						<div class="difficulty" id="difficulty"></div>
+					</div>
+					<div class="question" id="question"></div>
+					<div class="answers" id="answers"></div>
+				</div>
+				<div class="footer-card" id="footer-card">
+					<div class="next-prev-buttons">
+						<button type="button" class="button prev-ques" id="prev-ques">Pervious Question</button>
+						<button type="button" class="button next-ques" id="next-ques">Next Question</button>
+					</div>
+					<div class="dark-icon" id="dark-icon">
+						<i class="fa-regular fa-moon"></i>
+					</div>
+				</div>
+			</div>
+			<div class="result-screen" id="result-screen">
+				<h2 class="status" id="status"></h2>
+				<h3 class="score" id="score">Your Score</h3>
+				<p class="grade" id="grade">
+					<span></span>
+				</p>
+				<p class="percentage" id="percentage">
+					<span></span>
+				</p>
+				<button type="button" class="button try-again" id="try-again">Try Again</button>
+			</div>
+		</main>
+		<!-- End Main Section -->
+
+		<!-- Call JS Awesome Icon -->
+		<script src="script/all.min.js"></script>
+		<!-- Call JS Bootstrap File -->
+		<script src="script/bootstrap.bundle.min.js"></script>
+		<!-- Call Main Js File -->
+		<script src="script/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,500 @@
+/* ========================= Start General Variable ========================= */
+:root {
+    --background: #f0f4ff;
+    --card: #FFFFFF;
+    --muted: #1e293b;
+    --accent: #60a5fa;
+    --accent-dark: #2563eb;
+    --danger: #ef4444;
+    --success: #10b981;
+    --glass: rgba(0, 0, 0, 0.05);
+    --border: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+    --background: #0f172a;
+    --card: #1e293b;
+    --muted: #e2e8f0;
+    --accent: #60a5fa;
+    --accent-dark: #3b82f6;
+    --danger: #f87171;
+    --success: #34d399;
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================= End General Variable ========================= */
+
+/* ========================= Start General Rules ========================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    background: var(--background);
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.4rem;
+    color: var(--muted);
+    min-height: 100vh;
+    height: auto;
+    transition: background 0.3s ease;
+}
+
+/* ========================= End General Rules ========================= */
+
+/* ========================= Start Common Components ========================= */
+.hidden {
+    display: none !important;
+}
+
+main {
+    background: var(--background);
+    width: 100%;
+    max-width: 78rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.button {
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.timer,
+.status,
+.score,
+.grade,
+.percentage {
+    min-width: 4.8rem;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    background: var(--glass);
+    font-weight: bold;
+    color: var(--muted);
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+}
+
+.timer .counter,
+.grade span,
+.percentage span {
+    min-width: 2rem;
+    background: var(--card);
+    color: var(--accent-dark);
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+    margin-left: 0.5rem;
+
+}
+
+/* ========================= End Common Components =========================*/
+
+/* ========================= Start Screen Animations ========================= */
+.start-screen,
+.quiz-screen,
+.result-screen {
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+/* Fade Out Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.fade-out {
+    animation-name: fadeOut;
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation-name: slideInRight;
+}
+
+/* Slide Out To Left */
+@keyframes slideOutLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.slide-out-left {
+    animation-name: slideOutLeft;
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.scale-in {
+    animation-name: scaleIn;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+/* Shake Animation */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 0.5s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ========================= End Screen Animations ========================= */
+
+/* ========================= Start (Start Screen)  ========================= */
+.start-screen {
+    background: var(--card);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.start-screen .title {
+    animation: fadeIn 0.6s ease;
+}
+
+.start-screen .button {
+    animation: fadeIn 0.8s ease;
+    color: var(--card);
+}
+
+/* ========================= End (Start Screen)  ========================= */
+
+/* ========================= Start (Quiz Screen)  ========================= */
+.quiz-screen .header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2rem solid var(--muted);
+    padding-bottom: 1rem;
+}
+
+.quiz-screen .header-card .title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--muted);
+}
+
+.quiz-screen .header-card .number-of-page {
+    min-width: 4.8rem;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    background: var(--glass);
+    font-weight: bold;
+    color: var(--muted);
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+}
+
+.quiz-screen .content-card {
+    margin: 1rem 0;
+}
+
+.quiz-screen .content-card .meta-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    color: var(--muted);
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    background: var(--glass);
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+    margin-bottom: 1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+.quiz-screen .content-card .question {
+    padding: 0.5rem 1rem;
+    color: var(--muted);
+    border-radius: 0.5rem;
+    background: var(--glass);
+    font-weight: bold;
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+    margin-bottom: 1rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.quiz-screen .content-card .answers {
+    padding: 0.5rem 1rem;
+    color: var(--muted);
+    border-radius: 0.5rem;
+    background: var(--glass);
+    font-weight: bold;
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+}
+
+.quiz-screen .content-card .answers .choice {
+    background: var(--card);
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease;
+    animation-fill-mode: both;
+}
+
+.quiz-screen .content-card .answers .choice:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.quiz-screen .content-card .answers .choice:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.quiz-screen .content-card .answers .choice:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.quiz-screen .content-card .answers .choice:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.quiz-screen .content-card .answers .choice input {
+    margin-right: 1rem;
+}
+
+.quiz-screen .content-card .answers .choice:hover {
+    transform: translateX(0.4rem);
+    background: var(--accent);
+    color: white;
+}
+
+.selected {
+    background: var(--accent) !important;
+    color: white !important;
+    transform: scale(1.02);
+}
+
+.quiz-screen .footer-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.2rem solid var(--muted);
+    padding-top: 1rem;
+}
+
+.quiz-screen .footer-card .dark-icon {
+    min-width: 4.8rem;
+    text-align: center;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    background: var(--glass);
+    font-weight: bold;
+    color: var(--muted);
+    border: 0.1rem solid rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-screen .footer-card .dark-icon:hover {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* ========================= End (Quiz Screen)  ========================= */
+
+/* ========================= Result Screen  ========================= */
+.result-screen {
+    padding: 1rem;
+    text-align: center;
+    background: var(--card);
+    border-radius: 0.5rem;
+}
+
+.result-screen .status {
+    margin-bottom: 1rem;
+    color: var(--accent-dark);
+    animation: scaleIn 0.5s ease;
+}
+
+.result-screen .score {
+    animation: fadeIn 0.6s ease 0.2s both;
+}
+
+.result-screen .grade {
+    animation: fadeIn 0.7s ease 0.3s both;
+}
+
+.result-screen .percentage {
+    animation: fadeIn 0.8s ease 0.4s both;
+}
+
+.result-screen .button {
+    animation: fadeIn 0.9s ease 0.5s both;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ========================= Responsive Design  ========================= */
+@media (max-width: 768px) {
+    .header-card {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-card {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .button {
+        margin: 0.5rem;
+    }
+}

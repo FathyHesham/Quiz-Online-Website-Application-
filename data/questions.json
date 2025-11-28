@@ -1,0 +1,84 @@
+{
+	"questions_answers": [
+		{
+			"type": "multiple",
+			"difficulty": "medium",
+			"category": "Science: Computers",
+			"question": "What did the name of the Tor Anonymity Network orignially stand for?",
+			"correct_answer": "The Onion Router",
+			"incorrect_answers": ["The Only Router", "The Orange Router", "The Ominous Router"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "hard",
+			"category": "Science: Computers",
+			"question": "What major programming language does Unreal Engine 4 use?",
+			"correct_answer": "C++",
+			"incorrect_answers": ["Assembly", "C#", "ECMAScript"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "medium",
+			"category": "Science: Computers",
+			"question": "Originally used in PCM adapters, what frequency is the standard for sampling audio in the Compact Disc Digital Audio format?",
+			"correct_answer": "44.1 kHz",
+			"incorrect_answers": ["32.0 kHz", "1.5 MHz", "20.5 kHz"]
+		},
+		{
+			"type": "boolean",
+			"difficulty": "medium",
+			"category": "Science: Computers",
+			"question": "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
+			"correct_answer": "True",
+			"incorrect_answers": ["False"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "medium",
+			"category": "Science: Computers",
+			"question": "When was the programming language &quot;C#&quot; released?",
+			"correct_answer": "2000",
+			"incorrect_answers": ["1998", "1999", "2001"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "hard",
+			"category": "Science: Computers",
+			"question": "Which of the following computer components can be built using only NAND gates?",
+			"correct_answer": "ALU",
+			"incorrect_answers": ["CPU", "RAM", "Register"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "easy",
+			"category": "Science: Computers",
+			"question": "Which computer language would you associate Django framework with?",
+			"correct_answer": "Python",
+			"incorrect_answers": ["C#", "C++", "Java"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "medium",
+			"category": "Science: Computers",
+			"question": "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+			"correct_answer": "Santa Clara",
+			"incorrect_answers": ["Palo Alto", "Cupertino", "Mountain View"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "easy",
+			"category": "Science: Computers",
+			"question": "What amount of bits commonly equals one byte?",
+			"correct_answer": "8",
+			"incorrect_answers": ["1", "2", "64"]
+		},
+		{
+			"type": "multiple",
+			"difficulty": "easy",
+			"category": "Science: Computers",
+			"question": "In networking, what does OSPF stand for?",
+			"correct_answer": "Open Shortest Path First",
+			"incorrect_answers": ["Order State Part First", "Order Sense Ping Find", "Open Signal Path Finder"]
+		}
+	]
+}
